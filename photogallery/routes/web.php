@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumsController;
+use App\Http\Controllers\PhotosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,8 @@ use App\Http\Controllers\AlbumsController;
 Route::get('/', [AlbumsController::class, 'index']);
 Route::get('/albums', [AlbumsController::class, 'index']);
 Route::get('/albums/create', [AlbumsController::class, 'create']);
+Route::get('/albums/show/{id}',[AlbumsController::class,'show']);
 Route::post('/albums/store',[AlbumsController::class,'store']);
+
+Route::get('/photos/create/{id}', [PhotosController::class, 'create']);
+Route::post('/photos/store',[PhotosController::class,'store']);
