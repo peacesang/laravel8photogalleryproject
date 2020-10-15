@@ -13,7 +13,13 @@
     <script src="{{ asset('js/app.js') }}" ></script>
 </head>
 <body>
+    @include('inc.topbar')
+    <br>
+    <br>
+    <br>
+    
     <div class="container">
+        @include('inc.messages')
         @yield('content')
     </div>
     
