@@ -17,11 +17,17 @@ use App\Http\Controllers\PhotosController;
 
 //Route::get('/', 'AlbumsController@index');
 // Route::get('user/profile', [UserProfileController::class, 'show'])->name('profile');
+
+//album routes
 Route::get('/', [AlbumsController::class, 'index']);
 Route::get('/albums', [AlbumsController::class, 'index']);
 Route::get('/albums/create', [AlbumsController::class, 'create']);
 Route::get('/albums/show/{id}',[AlbumsController::class,'show']);
 Route::post('/albums/store',[AlbumsController::class,'store']);
 
+
+
+//photo routes
 Route::get('/photos/create/{id}', [PhotosController::class, 'create']);
 Route::post('/photos/store',[PhotosController::class,'store']);
+Route::get('/photos/show/{id}',[photosController::class,'show']);

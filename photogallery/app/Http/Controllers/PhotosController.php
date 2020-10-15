@@ -45,4 +45,10 @@ class PhotosController extends Controller
 
         return redirect('/albums/show/'.$request->album_id)->with('success','photo uploaded'); 
     }
+
+    public function show($id)
+    {
+        $photo=Photo::with('Album')->find($id);
+        return view('photos.show')->with('photo',$photo);
+    }
 }
