@@ -31,3 +31,4 @@ Route::post('/albums/store',[AlbumsController::class,'store']);
 Route::get('/photos/create/{id}', [PhotosController::class, 'create']);
 Route::post('/photos/store',[PhotosController::class,'store']);
 Route::get('/photos/show/{id}',[photosController::class,'show']);
+Route::delete('/photos/{id}',[photosController::class,'destroy']);
